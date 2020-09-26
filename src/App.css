@@ -225,3 +225,11 @@
     background-size: cover;
     background-position: center;
 }
+
+.footer__app {
+}
+
+.footer__app--separator {
+    border-bottom: 1px dashed #ababab;
+    width: 100%;
+}

@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import searchIco from './assets/img/search.svg';
 import cancelIco from './assets/img/cancel.svg';
+import facebookIco from './assets/img/facebook.svg';
+import twitterIco from './assets/img/twitter.svg';
 import Card from "./components/Card";
 import Vote from "./components/Vote";
 
@@ -125,6 +127,36 @@ function App() {
                     </button>
                 </div>
             </div>
+
+            <footer className="footer__app m-6">
+                <br />
+                <div className="footer__app--separator px-10"></div>
+                <br />
+                <div className="flex items-center justify-between flex-wrap">
+                    <div className="text-sm lg:flex-grow header--text-size">
+                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 mr-8">
+                            Terms and Conditions
+                        </a>
+                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 mr-8">
+                            Privacy Policy
+                        </a>
+                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 mr-8">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div className="text-sm lg:flex-grow header--text-size flex items-center justify-end">
+                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 mr-8">
+                            Follow Us
+                        </a>
+                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 mr-8">
+                            <img src={facebookIco} width="30" />
+                        </a>
+                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500">
+                            <img src={twitterIco} width="30" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
         
     </>
