@@ -3,6 +3,7 @@ import './App.css';
 import searchIco from './assets/img/search.svg';
 import cancelIco from './assets/img/cancel.svg';
 import Card from "./components/Card";
+import Vote from "./components/Vote";
 
 function App() {
   return (
@@ -60,8 +61,7 @@ function App() {
         </div>
 
         <div className="lg:container lg:mx-auto">
-            <div className="md:flex p-3 home__section--message">
-
+            <div className="md:flex p-3 home__section--message m-6">
                 <div className="flex items-center md:flex-shrink-0">
                     <div className="rounded-lg md:w-56">
                         <span className="home__section--message-text1">Speak out. Be heard.</span>
@@ -80,12 +80,38 @@ function App() {
                 </div>
             </div>
 
-            <h2 className="block mt-4 text-3xl">Votes</h2>
+            <h2 className="block my-10 text-3xl m-6 mb-4">Votes</h2>
 
-            <div class="flex mb-4">
-                <div class="w-1/2 sm:w-full p-2 bg-gray-400 text-center">.w-1/2</div>
-                <div class="w-1/2 sm:w-full p-2 bg-gray-500 text-center">.w-1/2</div>
+
+            <div className="flex flex-wrap">
+                <div className="w-full sm:w-1/2">
+                    <div className="m-6">
+                        <Vote />
+                    </div>
+                </div>
+                
+                <div className="w-full sm:w-1/2">
+                    <div className="m-6">
+                        <Vote />
+                    </div>
+                </div>
+                <div className="w-full sm:w-1/2">
+                    <div className="m-6">
+                        <Vote />
+                    </div>
+                </div>
+                <div className="w-full sm:w-1/2">
+                    <div className="m-6">
+                        <Vote />
+                    </div>
+                </div>
+                <div className="w-full sm:w-1/2">
+                    <div className="m-6">
+                        <Vote />
+                    </div>
+                </div>
             </div>
+
         </div>
         
     </>
