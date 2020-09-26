@@ -3,26 +3,64 @@ import likeIcon from '../assets/img/like.svg';
 
 function Vote() {
     return (
-        <div className="grid grid-cols-2 vote--container text-left">
-            <div className="col-span-2 p-6">
-                <div className="col-span-2">
-                    <h1>Pope Francis?</h1>
+        <div
+            className="grid grid-cols-2 vote--container text-left"
+            style={{
+                backgroundImage: "url('./images/kanye_west.jpg')"
+            }}
+        >
+            <div className="col-span-2">
+                <div className="col-span-2 h-48 hidden md:block"></div>
+                <div className="w-full vote__container-text">
+                    <div class="flex mb-4">
+                        <div class="w-10">
+                            <div className="h-5"></div>
+                            <div className="vote__content--button-like  mr-4">
+                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                            </div>
+                        </div>
+                        <div class="w-5/6">
+                            <div className="col-span-2">
+                                <span className="vote__container-text-title">Pope Francis?</span>
+                                <br />
+                                <span className="vote__container-text-subtitle">Pope Francis?</span>
+                            </div>
+                            <div className="col-span-2 py-3">
+                                <span className="vote__container-text-description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</span>
+                            </div>
+
+                            <div className="flex flex-row items-center">
+                                <div className="vote__content--button-like  mr-4">
+                                    <img src={likeIcon} className="vote__content--button-like-icon" />
+                                </div>
+                                <div className="vote__content--button-not-like  mr-4">
+                                    <img src={likeIcon} className="vote__content--button-like-icon" />
+                                </div>
+
+                                <button class="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
+                                    Vote now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-span-2">
+                        <div className="flex flex-row items-center">
+                            <div class="vote__content--metrics-like" style={{width: 64 + "%"}}>
+                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                <span>64%</span>
+                            </div>
+                            <div class="vote__content--metrics-like not" style={{width: 36 + "%"}}>
+                                <span>36%</span>
+                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-span-2 py-3">
-                    <h2>He´s talking tough on clergy sexual abuse,
-                    but is he just another papal pervert 
-                    protector? (thumbs down) or a true 
-                    pedophile punishing pontiff? (thumbs up)</h2>
-                </div>
-                <div className="col-span-2 pb-3">More information</div>
-                <div className="col-span-2 pt-4 pb-0">What´s Your Verdict?</div>
             </div>
-            <div className="flex flex-col items-center w-full p-4 vote__content--button-like">
-                <img src={likeIcon} className="vote__content--button-like-icon" />
-            </div>
-            <div className="flex flex-col items-center w-full p-4 vote__content--button-not-like">
-                <img src={likeIcon} className="vote__content--button-like-icon" />
-            </div>
+
+            
+            
         </div>
     )
 }

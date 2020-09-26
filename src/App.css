@@ -128,31 +128,38 @@
     background: #48484899;
     color: #fff;
     font-size: 16px;
+    background-position: center;
 }
 
 .vote--container h1 {
-    font-size: 60px;
+    font-size: 45px;
 }
 
 .vote--container h2 {
-    font-size: 21px;
+    font-size: 16px;
 }
 
 .vote__content--button-like {
+    width: 30px;
+    padding: 5px;
     background-color: #1cbbb4;
 }
 
 .vote__content--button-not-like {
+    width: 30px;
+    padding: 5px;
     background-color: #ffad1d;
 }
 
 .vote__content--button-like:hover {
     cursor: pointer;
+    border: 1px solid #fff;
     background-color: #1a7b77;
 }
 
 .vote__content--button-not-like:hover {
     cursor: pointer;
+    border: 1px solid #fff;
     background-color: #b17b1c;
 }
 
@@ -174,4 +181,36 @@
 
 .vote__content--button-not-like img {
     transform: rotate(180deg);
+}
+
+.vote__container-text {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);    
+}
+
+.vote__container-text-title {
+    font-size: 45px;
+}
+.vote__container-text-subtitle {
+    font-size: 16px;
+}
+
+.vote__container-text-description {
+    font-size: 20px;
+}
+
+.vote__content--metrics-like {
+    background-color: #1a7b77c7;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.vote__content--metrics-like span {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.vote__content--metrics-like.not {
+    background-color: #ffad1dba;
 }
