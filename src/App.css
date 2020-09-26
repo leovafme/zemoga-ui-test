@@ -212,5 +212,10 @@
 }
 
 .vote__content--metrics-like.not {
+    justify-content: flex-end;
     background-color: #ffad1dba;
+}
+
+.vote__content--metrics-like.not img {
+    transform: rotate(180deg);
 }
