@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import searchIco from './assets/img/search.svg';
+import cancelIco from './assets/img/cancel.svg';
 import Card from "./components/Card";
 
 function App() {
@@ -57,6 +58,36 @@ function App() {
                 </div>
             </div>
         </div>
+
+        <div className="lg:container lg:mx-auto">
+            <div className="md:flex p-3 home__section--message">
+
+                <div className="flex items-center md:flex-shrink-0">
+                    <div className="rounded-lg md:w-56">
+                        <span className="home__section--message-text1">Speak out. Be heard.</span>
+                        <br />
+                        <span className="home__section--message-text2 font-bold">Be counted</span>
+                    </div>
+                </div>
+                <div className="flex items-center mt-4 md:mt-0 md:ml-6">
+                    <p className="mt-2">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It´s easy: You share your opinion, we analyze and put the data in a public report.</p>
+                </div>
+
+                <div className="flex items-center mt-1 md:mt-0 md:ml-6">
+                    <p className="mt-2 cursor-pointer">
+                        <img src={cancelIco} width="20" />
+                    </p>
+                </div>
+            </div>
+
+            <h2 className="block mt-4 text-3xl">Votes</h2>
+
+            <div class="flex mb-4">
+                <div class="w-1/2 sm:w-full p-2 bg-gray-400 text-center">.w-1/2</div>
+                <div class="w-1/2 sm:w-full p-2 bg-gray-500 text-center">.w-1/2</div>
+            </div>
+        </div>
+        
     </>
   );
 }

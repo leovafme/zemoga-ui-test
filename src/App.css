@@ -109,3 +109,15 @@
 .home__section--closing-right > .text {
     font-size: 36px;
 }
+
+.home__section--message {
+    background: #ebebeb;
+}
+
+.home__section--message-text1 {
+    font-size: 21px;
+}
+
+.home__section--message-text2 {
+    font-size: 38px;
+}
