@@ -17,3 +17,54 @@
     filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(340deg) brightness(110%) contrast(101%);
 }
 
+.card--container {
+    background: #48484899;
+    color: #fff;
+    font-size: 16px;
+}
+
+.card--container h1 {
+    font-size: 60px;
+}
+
+.card--container h2 {
+    font-size: 21px;
+}
+
+.card__content--button-like {
+    background-color: #1cbbb4;
+}
+
+.card__content--button-not-like {
+    background-color: #ffad1d;
+}
+
+.card__content--button-like:hover {
+    cursor: pointer;
+    background-color: #1a7b77;
+}
+
+.card__content--button-not-like:hover {
+    cursor: pointer;
+    background-color: #b17b1c;
+}
+
+.card--container:before {
+    content: '';
+    filter: blur(20px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.card__content--button-like-icon {
+    width: 30px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(340deg) brightness(110%) contrast(101%);
+}
+
+.card__content--button-not-like img {
+    transform: rotate(180deg);
+}

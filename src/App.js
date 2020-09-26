@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import searchIco from './assets/img/search.svg';
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -35,12 +36,13 @@ function App() {
                     </div>
                 </div>
             </nav>
-            <div className="grid grid-cols-12">
             
-
-                <div>1</div>
-                <div className="box-border h-20 w-32 p-4 border-4 border-gray-400 bg-gray-200">dsada sdsadsa</div>
-                <div>9</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+                <div className="h-10 col-span-2"></div>
+                <div className="w-full p-6">
+                    <Card />
+                </div>
+                <div className="w-6/12">9</div>
             </div>
         </div>
     </>
