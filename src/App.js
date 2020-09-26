@@ -112,6 +112,19 @@ function App() {
                 </div>
             </div>
 
+            <div className="flex mb-4 m-6 home__submit_name items-center">
+                <div className="w-5/6 p-2 text-left">
+                    <p className="bg-transparent text-black font-semibold py-2 px-4 rounded-none text-2xl">
+                        Is there anyone else you would want us to add?
+                    </p>
+                    
+                </div>
+                <div className="w-1/6 p-2 text-center">
+                    <button className="bg-transparent text-black font-semibold hover:text-white py-2 px-4 border border-black hover:bg-black rounded-none">
+                        Submit a Name
+                    </button>
+                </div>
+            </div>
         </div>
         
     </>

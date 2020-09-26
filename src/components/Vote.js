@@ -12,14 +12,14 @@ function Vote() {
             <div className="col-span-2">
                 <div className="col-span-2 h-48 hidden md:block"></div>
                 <div className="w-full vote__container-text">
-                    <div class="flex mb-4">
-                        <div class="w-10">
+                    <div className="flex mb-4">
+                        <div className="w-10">
                             <div className="h-5"></div>
                             <div className="vote__content--button-like  mr-4">
                                 <img src={likeIcon} className="vote__content--button-like-icon" />
                             </div>
                         </div>
-                        <div class="w-5/6">
+                        <div className="w-5/6">
                             <div className="col-span-2">
                                 <span className="vote__container-text-title">Pope Francis?</span>
                                 <br />
@@ -37,7 +37,7 @@ function Vote() {
                                     <img src={likeIcon} className="vote__content--button-like-icon" />
                                 </div>
 
-                                <button class="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
+                                <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
                                     Vote now
                                 </button>
                             </div>
@@ -46,11 +46,11 @@ function Vote() {
 
                     <div className="col-span-2">
                         <div className="flex flex-row items-center">
-                            <div class="vote__content--metrics-like" style={{width: 64 + "%"}}>
+                            <div className="vote__content--metrics-like" style={{width: 64 + "%"}}>
                                 <img src={likeIcon} className="vote__content--button-like-icon" />
                                 <span>64%</span>
                             </div>
-                            <div class="vote__content--metrics-like not" style={{width: 36 + "%"}}>
+                            <div className="vote__content--metrics-like not" style={{width: 36 + "%"}}>
                                 <span>36%</span>
                                 <img src={likeIcon} className="vote__content--button-like-icon" />
                             </div>

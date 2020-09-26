@@ -219,3 +219,9 @@
 .vote__content--metrics-like.not img {
     transform: rotate(180deg);
 }
+
+.home__submit_name {
+    background-image: url('./assets/img/background-people.jpg');
+    background-size: cover;
+    background-position: center;
+}
