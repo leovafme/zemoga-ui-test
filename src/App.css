@@ -68,3 +68,44 @@
 .card__content--button-not-like img {
     transform: rotate(180deg);
 }
+
+
+
+.home__section--closing {
+    background-color: #edf2f785;
+}
+
+.home__section--closing-left {
+    align-self: stretch;
+    background: rgb(63,62,84);
+    background: linear-gradient(90deg, rgba(63,62,84,0) 0%, rgba(2,0,36,0.2665441176470589) 39%, rgba(167,167,167, 0.50) 100%);
+}
+
+.home__section--closing-left::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 8.7px;
+    border-color: transparent transparent transparent #a8a8a8;
+    display: block;
+    left: calc(100% + 4px);
+    position: relative;
+    top: -13px;
+}
+
+
+.home__section--closing-right {
+    background-color: #edf2f785;
+}
+
+
+.home__section--closing-left > .text {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.home__section--closing-right > .text {
+    font-size: 36px;
+}

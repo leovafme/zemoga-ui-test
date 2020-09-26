@@ -40,9 +40,21 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2">
                 <div className="h-10 col-span-2"></div>
                 <div className="w-full p-6">
-                    <Card />
+                    <Card/>
                 </div>
-                <div className="w-6/12">9</div>
+                <div className="w-full p-6"></div>
+            </div>
+
+            <div className="h-10"></div>
+            
+            
+            <div className="flex mb-12 justify-center items-center">
+                <div className="w-4/12 p-1 text-right home__section--closing-left">
+                    <div className="text mr-2">CLOSING IN</div>
+                </div>
+                <div className="w-8/12 p-1 text-left home__section--closing-right">
+                    <div className="text ml-4">22 days</div>
+                </div>
             </div>
         </div>
     </>
