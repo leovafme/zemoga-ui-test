@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import likeIcon from '../assets/img/like.svg';
 
-function Vote() {
+const Vote = ({data}) => {
+    const [voteData, setVoteData] = useState({});
+
+    useEffect(() => {
+        if (data) {
+            const temporal_vote = Object.assign({}, data);
+            const temporal_total = data.like + data.notLike;
+
+            temporal_vote.percentage_like = Math.round((data.like * 100) / temporal_total);
+            temporal_vote.percentage_not_like = Math.round((data.notLike * 100) / temporal_total);
+
+            setVoteData(temporal_vote);
+        }    
+    }, [data])
+
     return (
         <div
             className="grid grid-cols-2 vote--container text-left"
             style={{
-                backgroundImage: "url('./images/kanye_west.jpg')"
+                backgroundImage: "url('"+voteData.image+"')"
             }}
         >
             <div className="col-span-2">
@@ -21,12 +35,12 @@ function Vote() {
                         </div>
                         <div className="w-5/6">
                             <div className="col-span-2">
-                                <span className="vote__container-text-title">Pope Francis?</span>
+                                <span className="vote__container-text-title">{voteData.title}</span>
                                 <br />
-                                <span className="vote__container-text-subtitle">Pope Francis?</span>
+                                <span className="vote__container-text-subtitle">{voteData.ago} in {voteData.category}</span>
                             </div>
                             <div className="col-span-2 py-3">
-                                <span className="vote__container-text-description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</span>
+                                <span className="vote__container-text-description">{voteData.description}</span>
                             </div>
 
                             <div className="flex flex-row items-center">
@@ -46,12 +60,12 @@ function Vote() {
 
                     <div className="col-span-2">
                         <div className="flex flex-row items-center">
-                            <div className="vote__content--metrics-like" style={{width: 64 + "%"}}>
+                            <div className="vote__content--metrics-like" style={{width: voteData.percentage_like + "%"}}>
                                 <img src={likeIcon} className="vote__content--button-like-icon" />
-                                <span>64%</span>
+                                <span>{voteData.percentage_like}%</span>
                             </div>
-                            <div className="vote__content--metrics-like not" style={{width: 36 + "%"}}>
-                                <span>36%</span>
+                            <div className="vote__content--metrics-like not" style={{width: voteData.percentage_not_like + "%"}}>
+                                <span>{voteData.percentage_not_like}%</span>
                                 <img src={likeIcon} className="vote__content--button-like-icon" />
                             </div>
                         </div>

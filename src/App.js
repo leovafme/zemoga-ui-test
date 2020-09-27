@@ -6,6 +6,7 @@ import facebookIco from './assets/img/facebook.svg';
 import twitterIco from './assets/img/twitter.svg';
 import Card from "./components/Card";
 import Vote from "./components/Vote";
+import { data as votesData } from './assets/mocks/data';
 
 function App() {
   return (
@@ -86,32 +87,13 @@ function App() {
 
 
             <div className="flex flex-wrap">
-                <div className="w-full sm:w-1/2">
-                    <div className="m-6">
-                        <Vote />
+                {votesData.map((vote, index) => (
+                    <div key={index} className="w-full sm:w-1/2">
+                        <div className="m-6">
+                            <Vote data={vote} />
+                        </div>
                     </div>
-                </div>
-                
-                <div className="w-full sm:w-1/2">
-                    <div className="m-6">
-                        <Vote />
-                    </div>
-                </div>
-                <div className="w-full sm:w-1/2">
-                    <div className="m-6">
-                        <Vote />
-                    </div>
-                </div>
-                <div className="w-full sm:w-1/2">
-                    <div className="m-6">
-                        <Vote />
-                    </div>
-                </div>
-                <div className="w-full sm:w-1/2">
-                    <div className="m-6">
-                        <Vote />
-                    </div>
-                </div>
+                ))}
             </div>
 
             <div className="flex mb-4 m-6 home__submit_name items-center">
