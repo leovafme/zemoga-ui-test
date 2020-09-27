@@ -37,7 +37,7 @@ function App() {
                             Sign Up
                         </a>
 
-                        <img className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white ml-8 header--button-search" src={searchIco}></img>
+                        <img className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white ml-8 header--button-search" src={searchIco} alt="search"></img>
                     </div>
                 </div>
             </nav>
@@ -58,7 +58,7 @@ function App() {
                     <div className="text mr-2">CLOSING IN</div>
                 </div>
                 <div className="w-8/12 p-1 text-left home__section--closing-right">
-                    <div className="text ml-4">22 days</div>
+                    <div className="text ml-4"><strong>22</strong> days</div>
                 </div>
             </div>
         </div>
@@ -78,12 +78,12 @@ function App() {
 
                 <div className="flex items-center mt-1 md:mt-0 md:ml-6">
                     <p className="mt-2 cursor-pointer">
-                        <img src={cancelIco} width="20" />
+                        <img src={cancelIco} width="20" alt="close" />
                     </p>
                 </div>
             </div>
 
-            <h2 className="block my-10 text-3xl m-6 mb-4">Votes</h2>
+            <h2 className="block my-10 m-6 mb-4 text-4xl">Votes</h2>
 
 
             <div className="flex flex-wrap">
@@ -131,10 +131,10 @@ function App() {
                             Follow Us
                         </a>
                         <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 mr-8">
-                            <img src={facebookIco} width="30" />
+                            <img src={facebookIco} width="30" alt="facebook"/>
                         </a>
                         <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500">
-                            <img src={twitterIco} width="30" />
+                            <img src={twitterIco} width="30" alt="twitter"/>
                         </a>
                     </div>
                 </div>

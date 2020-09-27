@@ -46,11 +46,11 @@ const Vote = ({data}) => {
                                     <div className="w-10">
                                         {voteData.percentage_like > voteData.percentage_not_like?
                                             <div className="vote__content--button-like  mr-4">
-                                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                                <img src={likeIcon} className="vote__content--button-like-icon" alt={`like ${voteData.title}`} />
                                             </div>
                                             :
                                             <div className="vote__content--button-like not  mr-4">
-                                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                                <img src={likeIcon} className="vote__content--button-like-icon" alt={`not like ${voteData.title}`}/>
                                             </div>
                                         }
                                     </div>
@@ -68,10 +68,10 @@ const Vote = ({data}) => {
                                 {voteData.active?
                                     <>
                                         <div className="vote__content--button-like  mr-4">
-                                            <img src={likeIcon} className="vote__content--button-like-icon" />
+                                            <img src={likeIcon} className="vote__content--button-like-icon" alt={`like ${voteData.title}`}/>
                                         </div>
                                         <div className="vote__content--button-not-like  mr-4">
-                                            <img src={likeIcon} className="vote__content--button-like-icon" />
+                                            <img src={likeIcon} className="vote__content--button-like-icon" alt={`not like ${voteData.title}`}/>
                                         </div>
 
                                         <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
@@ -90,12 +90,12 @@ const Vote = ({data}) => {
                     <div className="col-span-2">
                         <div className="flex flex-row items-center">
                             <div className="vote__content--metrics-like" style={{width: voteData.percentage_like + "%"}}>
-                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                <img src={likeIcon} className="vote__content--button-like-icon" alt={`like ${voteData.title}`}/>
                                 <span>{voteData.percentage_like}%</span>
                             </div>
                             <div className="vote__content--metrics-like not" style={{width: voteData.percentage_not_like + "%"}}>
                                 <span>{voteData.percentage_not_like}%</span>
-                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                <img src={likeIcon} className="vote__content--button-like-icon" alt={`not like ${voteData.title}`}/>
                             </div>
                         </div>
                     </div>
