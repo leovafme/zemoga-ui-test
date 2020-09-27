@@ -3,9 +3,8 @@
 }
 
 .header {
-    -webkit-box-shadow: inset 0px 58px 15px -9px rgb(0 0 0 / 35%);
-    -moz-box-shadow: inset 0px 58px 15px -9px rgb(0 0 0 / 35%);
-    box-shadow: inset 0px 58px 15px -9px rgb(0 0 0 / 35%);
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.6615021008403361) 100%);
 }
 
 .header--text-size {

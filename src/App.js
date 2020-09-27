@@ -17,10 +17,12 @@ function App() {
                 backgroundImage: "url('"+homeData.image+"')"
             }}
         >
+            {/* header */}
             <Header />
             
+            <div className="h-10"></div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2">
-                <div className="h-10 col-span-2"></div>
                 <div className="w-full p-6">
                     <Card title={homeData.title} description={homeData.description}/>
                 </div>
@@ -29,7 +31,7 @@ function App() {
 
             <div className="h-10"></div>
             
-            
+            {/* closing in days */}
             <div className="flex mb-12 justify-center items-center">
                 <div className="w-4/12 p-1 text-right home__section--closing-left">
                     <div className="text mr-2">CLOSING IN</div>
