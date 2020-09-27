@@ -145,6 +145,11 @@
     background-color: #1cbbb4;
 }
 
+.vote__content--button-like.not {
+    background-color: #ffad1d;
+    transform: rotate(180deg);
+}
+
 .vote__content--button-not-like {
     width: 30px;
     padding: 5px;
@@ -155,6 +160,12 @@
     cursor: pointer;
     border: 1px solid #fff;
     background-color: #1a7b77;
+}
+
+.vote__content--button-like.not:hover {
+    cursor: pointer;
+    border: 1px solid #fff;
+    background-color: #b17b1c;
 }
 
 .vote__content--button-not-like:hover {
@@ -232,4 +243,7 @@
 .footer__app--separator {
     border-bottom: 1px dashed #ababab;
     width: 100%;
+}
+.vote__container--content-info {
+    min-height: 350px;
 }

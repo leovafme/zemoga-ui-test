@@ -26,24 +26,45 @@ const Vote = ({data}) => {
             <div className="col-span-2">
                 <div className="col-span-2 h-48 hidden md:block"></div>
                 <div className="w-full vote__container-text">
-                    <div className="flex mb-4">
-                        <div className="w-10">
+                    <div className="flex items-end mb-4 vote__container--content-info">
+                        {/* <div className="w-10">
                             <div className="h-5"></div>
-                            <div className="vote__content--button-like  mr-4">
-                                <img src={likeIcon} className="vote__content--button-like-icon" />
-                            </div>
-                        </div>
+
+                            {voteData.percentage_like > voteData.percentage_not_like?
+                                <div className="vote__content--button-like  mr-4">
+                                    <img src={likeIcon} className="vote__content--button-like-icon" />
+                                </div>
+                                :
+                                <div className="vote__content--button-like not  mr-4">
+                                    <img src={likeIcon} className="vote__content--button-like-icon" />
+                                </div>
+                            }
+                        </div> */}
                         <div className="w-5/6">
-                            <div className="col-span-2">
-                                <span className="vote__container-text-title">{voteData.title}</span>
+                            <div>
+                                <div className="flex items-center">
+                                    <div className="w-10">
+                                        {voteData.percentage_like > voteData.percentage_not_like?
+                                            <div className="vote__content--button-like  mr-4">
+                                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                            </div>
+                                            :
+                                            <div className="vote__content--button-like not  mr-4">
+                                                <img src={likeIcon} className="vote__content--button-like-icon" />
+                                            </div>
+                                        }
+                                    </div>
+                                    <span className="vote__container-text-title">{voteData.title}</span>
+                                </div>
+                                
                                 <br />
-                                <span className="vote__container-text-subtitle">{voteData.ago} in {voteData.category}</span>
+                                <span className="ml-10 vote__container-text-subtitle">{voteData.ago} in {voteData.category}</span>
                             </div>
-                            <div className="col-span-2 py-3">
+                            <div className="ml-10 py-3">
                                 <span className="vote__container-text-description">{voteData.description}</span>
                             </div>
 
-                            <div className="flex flex-row items-center">
+                            <div className="flex flex-row items-center ml-10">
                                 <div className="vote__content--button-like  mr-4">
                                     <img src={likeIcon} className="vote__content--button-like-icon" />
                                 </div>
@@ -72,9 +93,6 @@ const Vote = ({data}) => {
                     </div>
                 </div>
             </div>
-
-            
-            
         </div>
     )
 }
