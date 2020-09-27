@@ -18,7 +18,7 @@ function App() {
                 <div className="w-full p-6">
                     <Card/>
                 </div>
-                <div className="w-full p-6"></div>
+                <div className="w-full p-6 hidden lg:inline-block"></div>
             </div>
 
             <div className="h-10"></div>
