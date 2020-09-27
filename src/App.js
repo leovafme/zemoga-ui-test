@@ -6,17 +6,23 @@ import Vote from "./components/Vote";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { data as votesData } from './assets/mocks/data';
+import { data as homeData } from './assets/mocks/data-initial';
 
 function App() {
   return (
     <>
-        <div className="lg:container lg:mx-auto section--background">
+        <div
+            className="lg:container lg:mx-auto section--background"
+            style={{
+                backgroundImage: "url('"+homeData.image+"')"
+            }}
+        >
             <Header />
             
             <div className="grid grid-cols-1 sm:grid-cols-2">
                 <div className="h-10 col-span-2"></div>
                 <div className="w-full p-6">
-                    <Card/>
+                    <Card title={homeData.title} description={homeData.description}/>
                 </div>
                 <div className="w-full p-6 hidden lg:inline-block"></div>
             </div>

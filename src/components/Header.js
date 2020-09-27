@@ -31,11 +31,11 @@ function Header() {
                             Log In 
                         </a>
                         <span className="mx-2 text-white hidden lg:inline-block">/</span>
-                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200">
+                        <a href="#/" className="block mt-4 mr-8 lg:inline-block lg:mt-0 text-white hover:text-teal-200">
                             Sign Up
                         </a>
 
-                        <img className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white ml-8 header--button-search" src={searchIco} alt="search"></img>
+                        <img className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white header--button-search" src={searchIco} alt="search"></img>
                     </div>
                 </div>
             </nav>
