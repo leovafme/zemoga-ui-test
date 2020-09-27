@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import searchIco from '../assets/img/search.svg';
+import {
+    Link
+} from "react-router-dom";
 
 function Header() {
     const [menuActive, setMenuActive] = useState(false);
@@ -12,7 +15,7 @@ function Header() {
         <>
             <nav className="flex items-center justify-between flex-wrap p-6 header">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
-                    <span className="font-semibold text-xl tracking-tight">Rule of Thumb.</span>
+                    <Link to="/" className="font-semibold text-xl tracking-tight">Rule of Thumb.</Link>
                 </div>
                 <div className="block lg:hidden">
                     <button onClick={toggleMenu} className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -21,19 +24,19 @@ function Header() {
                 </div>
                 <div className={`w-full block lg:flex lg:items-end lg:w-auto ${menuActive ? "" : "hidden"} lg:block`}>
                     <div className="text-sm lg:flex-grow header--text-size">
-                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-8">
+                        <Link to="/past-trials" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-8">
                             Past Trials
-                        </a>
-                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-8">
+                        </Link>
+                        <Link to="/how-it-works" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-8">
                             How It Works
-                        </a>
-                        <a href="#/" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200">
+                        </Link>
+                        <Link to="/login" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200">
                             Log In 
-                        </a>
+                        </Link>
                         <span className="mx-2 text-white hidden lg:inline-block">/</span>
-                        <a href="#/" className="block mt-4 mr-8 lg:inline-block lg:mt-0 text-white hover:text-teal-200">
+                        <Link to="/sign-up" className="block mt-4 mr-8 lg:inline-block lg:mt-0 text-white hover:text-teal-200">
                             Sign Up
-                        </a>
+                        </Link>
 
                         <img className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white header--button-search" src={searchIco} alt="search"></img>
                     </div>
