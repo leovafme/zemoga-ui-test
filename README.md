@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Zemoga UI test v2.0
+
+
+## Objective
+PNG Comp:
+
+https://s3-us-west-2.amazonaws.com/zemoga-files/ui/candidates-test/test-ui-v2.png
+
+## Preview result
+
+Open [https://nostalgic-williams-2e76ed.netlify.app/](https://nostalgic-williams-2e76ed.netlify.app/) view result.
+
+## Deploy status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd6e8dad-eb48-4c59-a0b7-166746520d78/deploy-status)](https://app.netlify.com/sites/nostalgic-williams-2e76ed/deploys)
+
 
 ## Available Scripts
 
