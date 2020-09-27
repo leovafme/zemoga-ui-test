@@ -65,16 +65,24 @@ const Vote = ({data}) => {
                             </div>
 
                             <div className="flex flex-row items-center ml-10">
-                                <div className="vote__content--button-like  mr-4">
-                                    <img src={likeIcon} className="vote__content--button-like-icon" />
-                                </div>
-                                <div className="vote__content--button-not-like  mr-4">
-                                    <img src={likeIcon} className="vote__content--button-like-icon" />
-                                </div>
+                                {voteData.active?
+                                    <>
+                                        <div className="vote__content--button-like  mr-4">
+                                            <img src={likeIcon} className="vote__content--button-like-icon" />
+                                        </div>
+                                        <div className="vote__content--button-not-like  mr-4">
+                                            <img src={likeIcon} className="vote__content--button-like-icon" />
+                                        </div>
 
-                                <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
-                                    Vote now
-                                </button>
+                                        <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
+                                            Vote now
+                                        </button>
+                                    </>
+                                    :
+                                    <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
+                                        Vote again
+                                    </button>
+                                }
                             </div>
                         </div>
                     </div>

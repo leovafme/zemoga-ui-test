@@ -1,5 +1,6 @@
 .section--background {
     background-image: url('./assets/img/home-top-background.jpg');
+    background-size: cover;
 }
 
 .header {
@@ -129,6 +130,7 @@
     color: #fff;
     font-size: 16px;
     background-position: center;
+    background-size: cover;
 }
 
 .vote--container h1 {

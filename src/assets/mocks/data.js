@@ -18,7 +18,7 @@ export const data = [
         total: 100,
         like: 36,
         notLike: 64,
-        image: "./images/kanye_west.jpg",
+        image: "./images/mark.jpg",
         active: false,
     },
     {
@@ -29,7 +29,7 @@ export const data = [
         total: 100,
         like: 36,
         notLike: 64,
-        image: "./images/kanye_west.jpg",
+        image: "./images/kristina.jpg",
         active: true,
     },
     {
@@ -40,7 +40,7 @@ export const data = [
         total: 100,
         like: 64,
         notLike: 36,
-        image: "./images/kanye_west.jpg",
+        image: "./images/malala.jpg",
         active: true,
     },
 ]
