@@ -5,11 +5,13 @@ import Card from "./components/Card";
 import Vote from "./components/Vote";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Modal from "./components/Modal";
 import { data as votesData } from './assets/mocks/data';
 import { data as homeData } from './assets/mocks/data-initial';
 
 const App = () => {
     const [votes, setVotes] = useState([]);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         // search storage data
@@ -39,6 +41,8 @@ const App = () => {
         setVotes([...tempVotes]);
         // save data in storage
         sessionStorage.setItem('votes_data', JSON.stringify(tempVotes));
+        // open modal
+        toggleModal()
 
     }, [votes]);
 
@@ -55,6 +59,10 @@ const App = () => {
 
     }, [votes]);
 
+    const toggleModal = useCallback( () => {
+        setShowModal(!showModal)
+    }, [showModal]);
+
     return (
         <>
             <div
@@ -65,6 +73,8 @@ const App = () => {
             >
                 {/* header */}
                 <Header />
+
+                <Modal message={"Thank you for voting!"} show={showModal} toggle={toggleModal}></Modal>
                 
                 <div className="h-10"></div>
 
