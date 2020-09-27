@@ -58,7 +58,7 @@ const Vote = ({data}) => {
                                 </div>
                                 
                                 <br />
-                                <span className="ml-10 vote__container-text-subtitle">{voteData.ago} in {voteData.category}</span>
+                                <span className="ml-10 vote__container-text-subtitle"><strong>{voteData.ago}</strong> in {voteData.category}</span>
                             </div>
                             <div className="ml-10 py-3">
                                 <span className="vote__container-text-description">{voteData.description}</span>
