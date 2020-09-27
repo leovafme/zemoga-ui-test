@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import likeIcon from '../assets/img/like.svg';
 
-const Vote = ({data}) => {
+const Vote = ({data, voteNow, voteAgain}) => {
     const [voteData, setVoteData] = useState({});
+    const [currentVote, setCurrentVote] = useState();
 
     useEffect(() => {
         if (data) {
@@ -14,7 +15,12 @@ const Vote = ({data}) => {
 
             setVoteData(temporal_vote);
         }    
-    }, [data])
+    }, [data]);
+
+
+    const selectVote = useCallback(type => {
+        setCurrentVote(type);
+    }, []);
 
     return (
         <div
@@ -27,19 +33,6 @@ const Vote = ({data}) => {
                 <div className="col-span-2 h-48 hidden md:block"></div>
                 <div className="w-full vote__container-text">
                     <div className="flex items-end mb-4 vote__container--content-info">
-                        {/* <div className="w-10">
-                            <div className="h-5"></div>
-
-                            {voteData.percentage_like > voteData.percentage_not_like?
-                                <div className="vote__content--button-like  mr-4">
-                                    <img src={likeIcon} className="vote__content--button-like-icon" />
-                                </div>
-                                :
-                                <div className="vote__content--button-like not  mr-4">
-                                    <img src={likeIcon} className="vote__content--button-like-icon" />
-                                </div>
-                            }
-                        </div> */}
                         <div className="w-5/6">
                             <div>
                                 <div className="flex items-center">
@@ -67,19 +60,20 @@ const Vote = ({data}) => {
                             <div className="flex flex-row items-center ml-10">
                                 {voteData.active?
                                     <>
-                                        <div className="vote__content--button-like  mr-4">
+                                        <div className={`vote__content--button-like ${currentVote? "active": ""} mr-4`} onClick={() => selectVote(true)}>
                                             <img src={likeIcon} className="vote__content--button-like-icon" alt={`like ${voteData.title}`}/>
                                         </div>
-                                        <div className="vote__content--button-not-like  mr-4">
+
+                                        <div className={`vote__content--button-not-like ${currentVote === false? "active": ""} mr-4`} onClick={() => selectVote(false)}>
                                             <img src={likeIcon} className="vote__content--button-like-icon" alt={`not like ${voteData.title}`}/>
                                         </div>
 
-                                        <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
+                                        <button onClick={() => voteNow(currentVote, voteData.id)} className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
                                             Vote now
                                         </button>
                                     </>
                                     :
-                                    <button className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
+                                    <button onClick={() => voteAgain(voteData.id)} className="bg-transparent text-white font-semibold hover:text-teal-200 py-2 px-4 border border-white hover:teal-200 rounded-none">
                                         Vote again
                                     </button>
                                 }

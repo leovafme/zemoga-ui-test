@@ -1,5 +1,6 @@
 export const data = [
     {
+        id: 1,
         title: "Kanye West",
         ago: "1 month ago",
         category: "Entretaiment",
@@ -11,6 +12,7 @@ export const data = [
         active: true,
     },
     {
+        id: 2,
         title: "Mark Zuckerberg",
         ago: "1 month ago",
         category: "Business",
@@ -22,6 +24,7 @@ export const data = [
         active: false,
     },
     {
+        id: 3,
         title: "Cristina Fernández de Kirchner",
         ago: "1 month ago",
         category: "Politics",
@@ -33,6 +36,7 @@ export const data = [
         active: true,
     },
     {
+        id: 4,
         title: "Malala Yousafzai",
         ago: "1 month ago",
         category: "Business",
